@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Modal Input Extension",
+  "version": "1.0",
+  "description": "Opens a modal for input on any website using Cmd+;",
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["modal.css"]
+    }
+  ],
+  "commands": {
+    "open-modal": {
+      "suggested_key": {
+        "default": "Ctrl+J",
+        "mac": "MacCtrl+J"
+      },
+      "description": "Open the input modal"
+    }
+  },
+  "web_accessible_resources": [{
+    "resources": ["highland-cow-cow-quick.nav-chrome-extension.jpg"],
+    "matches": ["<all_urls>"]
+  }]
+}
+
