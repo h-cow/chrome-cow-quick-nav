@@ -1,4 +1,4 @@
-const { describe, test, expect } = require('./unitTestRunner.js');
+const { describe, test, expect } = require('../testing/unitTestRunner.js');
 const { updateUrlTree } = require('./urlUtil.js');
 
 describe('updateUrlTree', () => {

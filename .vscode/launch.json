@@ -5,7 +5,7 @@
             "type": "node",
             "request": "launch",
             "name": "Unit Tests",
-            "program": "${workspaceFolder}/runUnitTests.js",
+            "program": "${workspaceFolder}/testing/runUnitTests.js",
             "console": "integratedTerminal",
             "skipFiles": [
                 "<node_internals>/**"
