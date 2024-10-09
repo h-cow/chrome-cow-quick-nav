@@ -26,6 +26,9 @@ function createModal() {
   submit = () => {
     const input = modal.querySelector('#modalInput').value;
     console.log('Input submitted:', input);
+    // Save the input to localStorage
+    const guid = crypto.randomUUID();
+    localStorage.setItem(`modalInput_${guid}`, input);
     modal.style.display = 'none';
   };
 
