@@ -1,60 +1,62 @@
 #myExtensionModal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255,255,255,0.1);
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .modal-content {
-  background-image: url('chrome-extension://__MSG_@@extension_id__/highland-cow-cow-quick.nav-chrome-extension.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 25vh auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 75%;
-  height: 50vh;
-  max-width: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  opacity: 0.94; /* Make the content 50% see-through */
+    background-image: url('chrome-extension://__MSG_@@extension_id__/highland-cow-cow-quick.nav-chrome-extension.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 25vh auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 75%;
+    height: 50vh;
+    max-width: 800px;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    opacity: 0.97;
 }
 
+
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 #modalInput {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 20px 0 8px 0;
-  box-sizing: border-box;
-  background-color: rgba(51, 51, 51);
-  color: white;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 25px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 20px 0 8px 0;
+    box-sizing: border-box;
+    background-color: rgba(51, 51, 51);
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 25px;
 }
 
 #submitInput:hover {
-  opacity: 0.8;
+    opacity: 0.8;
 }

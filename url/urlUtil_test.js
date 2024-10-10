@@ -125,6 +125,25 @@ describe('updateUrlTree', () => {
     });
   });
 
+  test('should handle multiple "/"s in the path and ignore ', () => {
+    const tree = {};
+    updateUrlTree('/path///to', tree);
+
+    expect(tree).toEqual({
+      _b: {
+        path: {
+          _c: 1,
+          _b: {
+            to: {
+              _c: 1,
+              _b: {}
+            }
+          }
+        }
+      }
+    });
+  });
+
   test('should handle empty paths', () => {
     const tree = {};
     updateUrlTree('', tree);

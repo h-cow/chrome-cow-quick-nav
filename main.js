@@ -19,9 +19,13 @@ function createModal() {
   modalInput.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       event.preventDefault();
-      modal.style.display = 'none';
+      closeModal();
     }
   });
+
+  const closeModal = () => {
+    modal.style.display = 'none';
+  };
 
   submit = () => {
     const input = modal.querySelector('#modalInput').value;
@@ -29,14 +33,20 @@ function createModal() {
     // Save the input to localStorage
     const guid = crypto.randomUUID();
     localStorage.setItem(`modalInput_${guid}`, input);
-    modal.style.display = 'none';
+    closeModal();
   };
 
   window.onclick = (event) => {
     if (event.target === modal) {
-      modal.style.display = 'none';
+      closeModal();
     }
   };
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  });
 }
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
